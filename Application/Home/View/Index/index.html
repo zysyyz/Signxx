@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign++免费网络验证 后台管理</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="keywords" content="sign++ 云网络验证系统 软件验证 脚本验证">
+    <meta name="description" content="免费的网络验证系统 提卡免费 可以管理多个软件 功能丰富">
+    <link rel="stylesheet" href="/Public/css/a100e2e6.app.css">
+    <link rel="stylesheet" href="/Public/css/common.css">
+    <script src="/Public/js/jquery-1.9.1.min.js"></script>
+    <script src="/Public/js/bootstrap.min.js"></script>
+    <script src="/Public/js/common.js"></script>
+</head>
+<style>
+    div.input-group {
+        width: 220px;
+    }
+    select {
+        border:none;
+        padding:0;
+        border-radius: 0;
+        cursor: pointer;
+    }
+    #code-numbers{
+        height: 160px;
+    }
+    div.panel {
+        border-radius: 0;
+    }
+    div.panel-body ul li a {
+        color: #333;
+        padding: 5px;
+    }
+    div.panel-body ul li a:hover {
+        text-decoration: none;
+        color: #666;
+    }
+    div.tongji {
+        width: 25%;
+        float: left;
+    }
+    ul.notice li {
+        margin-bottom: 8px;
+    }
+</style>
+<body>
+
+<include file="Application/Home/View/Common/Navigation.html"/>
+<include file="Application/Home/View/Common/Sidebar.html"/>
+
+
+<div class="right-container">
+
+    <select id="select" onchange="change()">
+        <option>全部软件</option>
+        <volist name="softlist" id="vo">
+            <option>{$vo.name}</option>
+        </volist>
+    </select>
+
+    <div id="code-numbers">
+        <div class="tongji">
+            <div class="stat-largetype-wrap">
+                <h4 class="stat-largetype">
+                    未使用
+                    <span class="transition-number">
+                        {$unuse_count?$unuse_count:0}
+                    </span>
+                </h4>
+            </div>
+        </div>
+        <div class="tongji">
+            <div class="stat-largetype-wrap">
+                <h4 class="stat-largetype">
+                    使用中
+                    <span class="transition-number">
+                        {$use_count?$use_count:0}
+                    </span>
+                </h4>
+            </div>
+        </div>
+        <div class="tongji">
+            <div class="stat-largetype-wrap">
+                <h4 class="stat-largetype">
+                    在线
+                    <span class="transition-number">
+                        {$online_count?$online_count:0}
+                    </span>
+                </h4>
+            </div>
+        </div>
+        <div class="tongji">
+            <div class="stat-largetype-wrap">
+                <h4 class="stat-largetype">
+                    冻结
+                    <span class="transition-number">
+                        {$frozen_count?$frozen_count:0}
+                    </span>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="callout callout-content ng-scope">
+        本次登录IP：<span id="curr_ip">{$currentlogin_ip}</span><br>
+        上次登录IP：<span id="last_ip">{$lastlogin_ip}</span><br>
+        上次登录时间：{$lastlogin_time}
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">公告</div>
+        <div class="panel-body">
+            <ul class="notice">
+                <volist name="notices" id="vo">
+                    <li><a href="/Home/notice?nid={$vo.id}">[{$vo.creat_time}] {$vo.title}</a></li>
+                </volist>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script>
+    window.onload = function() {
+        var curr_ip = document.getElementById('curr_ip');
+        var last_ip = document.getElementById('last_ip');
+        if (curr_ip.innerText != last_ip.innerText) {
+            last_ip.style.color = '#ff0011';
+        }
+
+        var select = document.getElementById('select');
+        select.selectedIndex = '{:I(softindex)}';
+    }
+
+    function change(selectObject) {
+        var select = document.getElementById('select');
+        window.location.href = '?softindex=' + select.selectedIndex;
+    }
+
+</script>
+</html>

@@ -1,0 +1,118 @@
+/*官网首页的css*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f1f4f7;
+    font-family: '微软雅黑';
+}
+div.container {
+    background: white;
+    width: 1200px;
+    margin: 0 auto;
+}
+.navbar {
+    position: relative;
+    background-color: #fff;
+    padding: 12px 0;
+    height: 50px;
+    box-shadow: 0 0 3px #ccc;
+    border-bottom: 1px solid #e7e7e7;
+}
+div.logo{
+    float: left;
+    height: 50px;
+    padding-left: 80px;
+}
+div.logo img {
+    margin-top: 10px;
+    height: 30px;
+}
+ul{
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    padding-right: 80px;
+}
+ul li{
+    float: left;
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+ul li a{
+    color: #555;
+    text-decoration: none;
+}
+ul li a.select{
+    color: #3090e4;
+}
+ul li a:hover{
+    color: #428bca;
+}
+div.banner{
+    padding-top: 50px;
+}
+div.banner-left{
+    background: white;
+    float: left;
+    height: 500px;
+    width: 50%;
+}
+div.banner-left div{
+    padding: 60px 70px 0 70px;
+}
+div.banner-left h1 {
+    color: #264969;
+    font-size: 3.3em;
+    display: inline-block;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    display: block;
+}
+
+div.banner-left p{
+    color: #7b7b7b;
+    font-size: 18px;
+    line-height: 1.9em;
+    margin-top: 1.7em;
+}
+div.banner-right{
+    background: white;
+    float: left;
+    height: 500px;
+    width: 50%;
+}
+div.banner-right img{
+    margin-top: 60px;
+    height: 384px;
+}
+a.begin{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    outline: none;
+    padding: 15px 45px;
+    border: 2px solid #e8e8e8;
+    border-radius: 2.3em;
+    -webkit-border-radius: 2.3em;
+    margin-top: 50px;
+    display: inline-block;
+}
+a.begin:hover {
+    color: #428bca;
+    border: 2px solid #428bca;
+}
+div.bottom{
+    background: #2b2b2b;
+    float: left;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: #888;
+    font-weight: 400;
+}

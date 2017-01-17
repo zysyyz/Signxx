@@ -1,0 +1,18 @@
+[ 2016-11-28T19:38:57+08:00 ] 221.11.95.97 /Home/changesoft?sid=&software=%E9%98%BF%E7%8B%B8LOL%E5%8A%A9%E6%89%8B&try_minutes=30&try_count=2&bindmode=0&unbindmode=0&version=1&update_url=http%3A%2F%2Fpan.lanzou.com%2Fu%2F%25E6%25B3%25A8%25E5%25AE%259A%7E%25E5%25AD%25A4%25E7%258B%25AC%25E7%25BB%2588%25E8%2580%2581%7E&updatemode=1&info=&frozen=0&submit=
+ERR: 1406:Data too long for column 'update_url' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-28 19:38:57', '145', '阿狸LOL助手', '30', '2', '0', '0', '1', 'http://pan.lanzou.com/u/%E6%B3%A8%E5%AE%9A~%E5%AD%A4%E7%8B%AC%E7%BB%88%E8%80%81~', '1', '', '0')
+ERR: 1406:Data too long for column 'update_url' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-28 19:38:57', '145', '阿狸LOL助手', '30', '2', '0', '0', '1', 'http://pan.lanzou.com/u/%E6%B3%A8%E5%AE%9A~%E5%AD%A4%E7%8B%AC%E7%BB%88%E8%80%81~', '1', '', '0')
+
+[ 2016-11-28T19:39:01+08:00 ] 221.11.95.97 /Home/changesoft?sid=&software=%E9%98%BF%E7%8B%B8LOL%E5%8A%A9%E6%89%8B&try_minutes=30&try_count=2&bindmode=0&unbindmode=0&version=1&update_url=http%3A%2F%2Fpan.lanzou.com%2Fu%2F%25E6%25B3%25A8%25E5%25AE%259A%7E%25E5%25AD%25A4%25E7%258B%25AC%25E7%25BB%2588%25E8%2580%2581%7E&updatemode=1&info=&frozen=0&submit=
+ERR: 1406:Data too long for column 'update_url' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-28 19:39:01', '145', '阿狸LOL助手', '30', '2', '0', '0', '1', 'http://pan.lanzou.com/u/%E6%B3%A8%E5%AE%9A~%E5%AD%A4%E7%8B%AC%E7%BB%88%E8%80%81~', '1', '', '0')
+ERR: 1406:Data too long for column 'update_url' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-28 19:39:01', '145', '阿狸LOL助手', '30', '2', '0', '0', '1', 'http://pan.lanzou.com/u/%E6%B3%A8%E5%AE%9A~%E5%AD%A4%E7%8B%AC%E7%BB%88%E8%80%81~', '1', '', '0')
+
+[ 2016-11-28T19:39:10+08:00 ] 221.11.95.97 /Home/changesoft?sid=&software=%E9%98%BF%E7%8B%B8LOL%E5%8A%A9%E6%89%8B&try_minutes=30&try_count=2&bindmode=0&unbindmode=0&version=1&update_url=http%3A%2F%2Fpan.lanzou.com%2Fu%2F%25E6%25B3%25A8%25E5%25AE%259A%7E%25E5%25AD%25A4%25E7%258B%25AC%25E7%25BB%2588%25E8%2580%2581%7E&updatemode=1&info=qwe&frozen=0&submit=
+ERR: 1406:Data too long for column 'update_url' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-28 19:39:10', '145', '阿狸LOL助手', '30', '2', '0', '0', '1', 'http://pan.lanzou.com/u/%E6%B3%A8%E5%AE%9A~%E5%AD%A4%E7%8B%AC%E7%BB%88%E8%80%81~', '1', 'qwe', '0')
+ERR: 1406:Data too long for column 'update_url' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-28 19:39:10', '145', '阿狸LOL助手', '30', '2', '0', '0', '1', 'http://pan.lanzou.com/u/%E6%B3%A8%E5%AE%9A~%E5%AD%A4%E7%8B%AC%E7%BB%88%E8%80%81~', '1', 'qwe', '0')
+

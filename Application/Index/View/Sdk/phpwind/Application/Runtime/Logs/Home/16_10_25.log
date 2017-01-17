@@ -1,0 +1,36 @@
+[ 2016-10-25T16:05:33+08:00 ] 14.115.124.33 /Home/changesoft?sid=&software=1&try_minutes=30&try_count=99999999999&bindmode=0&unbindmode=0&version=1&update_url=&updatemode=0&info=&frozen=0&submit=
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-10-25 16:05:33', '91', '1', '30', '99999999999', '0', '0', '1', '', '0', '', '0')
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-10-25 16:05:33', '91', '1', '30', '99999999999', '0', '0', '1', '', '0', '', '0')
+
+[ 2016-10-25T16:05:35+08:00 ] 14.115.124.33 /Home/changesoft?sid=&software=1&try_minutes=30&try_count=99999999999&bindmode=0&unbindmode=0&version=1&update_url=&updatemode=0&info=&frozen=0&submit=
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-10-25 16:05:35', '91', '1', '30', '99999999999', '0', '0', '1', '', '0', '', '0')
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-10-25 16:05:35', '91', '1', '30', '99999999999', '0', '0', '1', '', '0', '', '0')
+
+[ 2016-10-25T16:49:08+08:00 ] 14.115.190.199 /Home/createcode?softname=12&count=1&time=99999999999999999&time_type=day&mark=&creat_type=0&produce=
+ERR: 1264:Out of range value for column 'all_minutes' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_regcode (code, user_id, software_id, all_minutes, produce_time, time_str, software_name, mark) VALUES ('0FAEAF288C5A01F21A1574A0673B252B', '91', '167', 1.44E+20, '2016-10-25 16:49:08', '99999999999999999天', '12', '')
+
+ERR: 1264:Out of range value for column 'all_minutes' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_regcode (code, user_id, software_id, all_minutes, produce_time, time_str, software_name, mark) VALUES ('0FAEAF288C5A01F21A1574A0673B252B', '91', '167', 1.44E+20, '2016-10-25 16:49:08', '99999999999999999天', '12', '')
+
+
+[ 2016-10-25T16:49:16+08:00 ] 14.115.190.199 /Home/createcode?softname=12&count=1&time=99999999&time_type=day&mark=&creat_type=0&produce=
+ERR: 1264:Out of range value for column 'all_minutes' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_regcode (code, user_id, software_id, all_minutes, produce_time, time_str, software_name, mark) VALUES ('6F1C7C28766B731C2D823B623F03E429', '91', '167', 143999998560, '2016-10-25 16:49:16', '99999999天', '12', '')
+
+ERR: 1264:Out of range value for column 'all_minutes' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_regcode (code, user_id, software_id, all_minutes, produce_time, time_str, software_name, mark) VALUES ('6F1C7C28766B731C2D823B623F03E429', '91', '167', 143999998560, '2016-10-25 16:49:16', '99999999天', '12', '')
+
+
+[ 2016-10-25T16:49:20+08:00 ] 14.115.190.199 /Home/createcode?softname=12&count=1&time=9999999&time_type=day&mark=&creat_type=0&produce=
+ERR: 1264:Out of range value for column 'all_minutes' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_regcode (code, user_id, software_id, all_minutes, produce_time, time_str, software_name, mark) VALUES ('912CAC6348838E2ABC6C81016D4063F9', '91', '167', 14399998560, '2016-10-25 16:49:20', '9999999天', '12', '')
+
+ERR: 1264:Out of range value for column 'all_minutes' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_regcode (code, user_id, software_id, all_minutes, produce_time, time_str, software_name, mark) VALUES ('912CAC6348838E2ABC6C81016D4063F9', '91', '167', 14399998560, '2016-10-25 16:49:20', '9999999天', '12', '')
+
+

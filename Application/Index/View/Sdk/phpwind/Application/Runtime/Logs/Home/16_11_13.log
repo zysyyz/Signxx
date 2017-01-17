@@ -1,0 +1,24 @@
+[ 2016-11-13T01:17:58+08:00 ] 113.24.105.252 /Home/changesoft?sid=&software=%E5%B8%9D%E7%8E%8Bpc&try_minutes=43200&try_count=999999999999&bindmode=0&unbindmode=0&version=1&update_url=&updatemode=1&info=%E6%AC%A2%E8%BF%8E%E5%A4%A7%E5%AE%B6%E4%BD%BF%E7%94%A8%E6%9C%AC%E7%A8%8B%E5%BA%8F%EF%BC%81%E4%BD%9C%E8%80%85QQ1531738275&frozen=0&submit=
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-13 01:17:58', '118', '帝王pc', '43200', '999999999999', '0', '0', '1', '', '1', '欢迎大家使用本程序！作者QQ1531738275', '0')
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-13 01:17:58', '118', '帝王pc', '43200', '999999999999', '0', '0', '1', '', '1', '欢迎大家使用本程序！作者QQ1531738275', '0')
+
+[ 2016-11-13T01:18:06+08:00 ] 113.24.105.252 /Home/changesoft?sid=&software=%E5%B8%9D%E7%8E%8Bpc&try_minutes=43200&try_count=999999999999&bindmode=0&unbindmode=0&version=1&update_url=&updatemode=0&info=%E6%AC%A2%E8%BF%8E%E5%A4%A7%E5%AE%B6%E4%BD%BF%E7%94%A8%E6%9C%AC%E7%A8%8B%E5%BA%8F%EF%BC%81%E4%BD%9C%E8%80%85QQ1531738275&frozen=0&submit=
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-13 01:18:06', '118', '帝王pc', '43200', '999999999999', '0', '0', '1', '', '0', '欢迎大家使用本程序！作者QQ1531738275', '0')
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-13 01:18:06', '118', '帝王pc', '43200', '999999999999', '0', '0', '1', '', '0', '欢迎大家使用本程序！作者QQ1531738275', '0')
+
+[ 2016-11-13T01:18:18+08:00 ] 113.24.105.252 /Home/changesoft?sid=&software=%E5%B8%9D%E7%8E%8Bpc&try_minutes=43200&try_count=999999999999&bindmode=0&unbindmode=0&version=1&update_url=www.sohu.com&updatemode=0&info=%E6%AC%A2%E8%BF%8E%E5%A4%A7%E5%AE%B6%E4%BD%BF%E7%94%A8%E6%9C%AC%E7%A8%8B%E5%BA%8F%EF%BC%81%E4%BD%9C%E8%80%85QQ1531738275&frozen=0&submit=
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-13 01:18:18', '118', '帝王pc', '43200', '999999999999', '0', '0', '1', 'www.sohu.com', '0', '欢迎大家使用本程序！作者QQ1531738275', '0')
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-13 01:18:18', '118', '帝王pc', '43200', '999999999999', '0', '0', '1', 'www.sohu.com', '0', '欢迎大家使用本程序！作者QQ1531738275', '0')
+
+[ 2016-11-13T01:19:41+08:00 ] 113.24.105.252 /Home/changesoft?sid=&software=%E5%B8%9D%E7%8E%8Bpc&try_minutes=43200&try_count=999999999999&bindmode=0&unbindmode=0&version=2&update_url=&updatemode=0&info=%E6%AC%A2%E8%BF%8E%E5%A4%A7%E5%AE%B6%E4%BD%BF%E7%94%A8%E6%9C%AC%E7%A8%8B%E5%BA%8F%EF%BC%81%E4%BD%9C%E8%80%85QQ1531738275&frozen=0&submit=
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-13 01:19:41', '118', '帝王pc', '43200', '999999999999', '0', '0', '2', '', '0', '欢迎大家使用本程序！作者QQ1531738275', '0')
+ERR: 1264:Out of range value for column 'try_count' at row 1
+ [ SQL语句 ] : INSERT INTO cloud_software (create_time, user_id, name, try_minutes, try_count, bindmode, unbindmode, version, update_url, updatemode, info, frozen) VALUES ('2016-11-13 01:19:41', '118', '帝王pc', '43200', '999999999999', '0', '0', '2', '', '0', '欢迎大家使用本程序！作者QQ1531738275', '0')
+

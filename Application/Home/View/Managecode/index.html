@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>Sign++免费网络验证 后台管理</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="keywords" content="sign++ 云网络验证系统 软件验证 脚本验证">
+    <meta name="description" content="免费的网络验证系统 提卡免费 可以管理多个软件 功能丰富">
+    <link rel="stylesheet" href="/Public/css/a100e2e6.app.css">
+    <link rel="stylesheet" href="/Public/css/common.css">
+    <script src="/Public/js/jquery-1.9.1.min.js"></script>
+    <script src="/Public/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .right-container form.form {
+        width: 850px;
+    }
+
+    .topdiv {
+        width: 100%;
+        height: 74px;
+    }
+
+    .zhucema {
+        width: 288px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .timechoose {
+        margin-bottom: 12px;
+        float: left;
+    }
+
+    .timechoose label {
+        display: block;
+    }
+
+    .timechoose input {
+        margin-bottom: 5px;
+        margin-right: 2px;
+        height: 34px;
+        padding: 6px 10px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #d0d0d0;
+        border-radius: 4px;
+        box-shadow: inset 0 1 p
+    }
+
+    .timechoose input.fromtime {
+        margin-left: 5px;
+    }
+
+    .topdiv button {
+        float: right;
+        margin-top: 25px;
+    }
+
+    .middlediv {
+        width: 100%;
+        height: 74px;
+    }
+
+    .software {
+        width: 240px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .alltime {
+        float: left;
+    }
+
+    .alltime input.form-control {
+        width: 80px;
+    }
+
+    .alltime span {
+        width: 100px;
+    }
+
+    div.unuse, div.online, div.expire {
+        float: left;
+        margin-left: 20px;
+    }
+
+    div.unuse label, div.online label, div.expire label {
+        display: block;
+    }
+
+    div.checkbox {
+        margin-top: 6px;
+        float: left;
+    }
+
+    .checkbox + .checkbox {
+        margin-left: 8px;
+        margin-top: 6px;
+    }
+
+    .custom-control {
+        padding-left: 18px;
+    }
+
+    .right-container button {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .right-container table {
+        width: 100%;
+    }
+
+    .right-container table th {
+        height: 35px;
+        background: #f7f7f7;
+        color: #666;
+        text-align: center;
+    }
+
+    .right-container table td {
+        height: 30px;
+        color: #999;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .right-container table td.opera div {
+        width: 104px;
+        height: 36px;
+        margin: 0 auto;
+    }
+
+    .right-container table td button {
+        float: left;
+        margin-bottom: 0;
+        margin-top: 3px;
+    }
+
+    .right-container table td button:nth-child(2) {
+        margin-left: 12px;
+    }
+
+    .pagination:nth-child(2) {
+        margin-left: 12px;
+    }
+
+    nav.page {
+        width: 100%;
+        height: 79px;
+        text-align: center;
+    }
+    td.codemark {
+        max-width: 100px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    button.exportbtn {
+        float: right;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+
+<include file="Application/Home/View/Common/Navigation.html"/>
+<include file="Application/Home/View/Common/Sidebar.html"/>
+
+<div class="right-container">
+    <form method="get" class="form">
+        <div class="topdiv">
+            <div class="zhucema">
+                <label>注册码</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="regcode" value="{:I(regcode)}">
+                </div>
+            </div>
+
+            <div class="timechoose">
+                <label>选择时间</label>
+                <select name="timerangetype" id="">
+                    <option value="1" {:I(timerangetype)==1?"selected='selected'":""}>过期时间</option>
+                    <option value="2" {:I(timerangetype)==2?"selected='selected'":""}>生成时间</option>
+                    <option value="3" {:I(timerangetype)==3?"selected='selected'":""}>开始使用时间</option>
+                    <option value="4" {:I(timerangetype)==4?"selected='selected'":""}>最后登录时间</option>
+                </select>
+                <input type="date" name="timerangefrom" value="{:I(timerangefrom)}">至
+                <input type="date" name="timerangeto" value="{:I(timerangeto)}">
+            </div>
+
+            <button type="submit" name="search" class="btn btn-primary">搜索</button>
+        </div>
+
+        <div class="middlediv">
+            <div class="software">
+                <label>软件名称</label>
+                <div class="input-group">
+                    <input type="text" readonly="readonly" class="form-control softname-input" name="softname" value="{:I(softname)}">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">选择软件 <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <volist name="softlist" id="vo">
+                                <li><a class="softname_btn" href="#">{$vo.name}</a></li>
+                            </volist>
+                            <li role="separator" class="divider"></li>
+                            <li><a class="softname_btn_unchoose" href="#">不选择</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alltime">
+                <label>总共时长</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="time" value="{:I(time)}">
+                    <span class="time input-group-addon">
+        <input type="radio" name="time_type" value="hour" {:I(time_type)=='hour'?"checked='checked'":""}> 小时&emsp;
+                        <input type="radio" name="time_type" value="day" {:I(time_type)=='day'?"checked='checked'":''}> 天
+        </span>
+                </div>
+            </div>
+
+            <div class="form-group online">
+                <label class="control-label">是否在线</label>
+                <div class="checkbox custom-control">
+                    <label>
+                        <input type="checkbox" name="online_yes" {:I(online_yes)=='on'?"checked='checked'":""}>
+                        <span class="control-indicator"></span>在线
+                    </label>
+                </div>
+                <div class="checkbox custom-control">
+                    <label>
+                        <input type="checkbox" name="online_no" {:I(online_no)=='on'?"checked='checked'":""}>
+                        <span class="control-indicator"></span>不在线
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group expire">
+                <label class="control-label">是否过期</label>
+                <div class="checkbox custom-control">
+                    <label>
+                        <input type="checkbox" name="expire_yes" {:I(expire_yes)=='on'?"checked='checked'":""}>
+                        <span class="control-indicator"></span>过期
+                    </label>
+                </div>
+                <div class="checkbox custom-control">
+                    <label>
+                        <input type="checkbox" name="expire_no" {:I(expire_no)=='on'?"checked='checked'":""}>
+                        <span class="control-indicator"></span>未过期
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group unuse">
+                <label class="control-label">是否使用</label>
+                <div class="checkbox custom-control">
+                    <label>
+                        <input type="checkbox" name="inuse_yes" {:I(inuse_yes)=='on'?"checked='checked'":""}>
+                        <span class="control-indicator"></span>已用
+                    </label>
+                </div>
+                <div class="checkbox custom-control">
+                    <label>
+                        <input type="checkbox" name="inuse_no" {:I(inuse_no)=='on'?"checked='checked'":""}>
+                        <span class="control-indicator"></span>未使用
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+    <hr>
+
+    <form method="get">
+        <button name="op" value="export1" class="btn btn-default exportbtn">导出注册码和推荐码</button>
+        <button name="op" value="export2" class="btn btn-default exportbtn">导出注册码</button>
+    </form>
+
+
+    <table>
+        <th>注册码</th>
+        <th>软件</th>
+        <th>时长</th>
+        <th>生成时间</th>
+        <th>到期时间</th>
+        <th>使用次数</th>
+        <th>在线</th>
+        <th>备注</th>
+        <th>推荐码</th>
+        <th>操作</th>
+        <volist name="list" id="vo">
+            <tr>
+                <td>{$vo.code}</td>
+                <td>{$vo.software_name}</td>
+                <td>{$vo.time_str}</td>
+                <td>{$vo.produce_time}</td>
+                <td>{$vo.expire_time}</td>
+                <td>{$vo.use_count}</td>
+                <td class="isonline">{$vo.isonline}</td>
+                <td class="codemark">{$vo.mark}</td>
+                <td class="recommendid">{$vo.id}</td>
+                <td class="opera">
+                    <div>
+                        <button type="button" class="btn btn-default btn-sm" onclick="window.location.href='/Home/managecode/codedetail?code={$vo.code}'">详情</button>
+
+                        <button type="button" class="btn btn-danger btn-sm" onclick="del('{$vo.code}')">删除</button>
+                    </div>
+                </td>
+            </tr>
+        </volist>
+    </table>
+    <nav class="page">
+        <div>
+            <ul class="pagination">
+                {$firstbtn}
+                {$pagelist}
+                {$lastbtn}
+            </ul>
+            <ul class="pagination">
+                {$prevbtn}
+                {$nextbtn}
+            </ul>
+        </div>
+    </nav>
+</div>
+</body>
+<script>
+    function del(code) {
+        if (confirm('确定删除吗?')) {
+            if ('{$querystr}' != '') {
+                window.location.href = '/Home/managecode?{$querystr}' + '&delcode=' + code;
+            } else {
+                window.location.href='/Home/managecode?delcode=' + code;
+            }
+        }
+    }
+
+    $('.softname_btn').click(function () {
+        $('.softname-input').val($(this).text());
+    });
+    $('.softname_btn_unchoose').click(function () {
+        $('.softname-input').val('');
+    });
+
+    window.onload = function () {
+        var x = document.getElementsByClassName("isonline");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            if (x[i].innerText == '1') {
+                x[i].innerText = '是';
+            } else {
+                x[i].innerText = '否';
+            }
+        }
+
+        var x = document.getElementsByClassName("recommendid");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].innerText = parseInt(x[i].innerText) + 10000;
+        }
+    };
+</script>
+</html>

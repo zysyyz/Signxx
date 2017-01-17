@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>Sign++免费网络验证 后台管理</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="keywords" content="sign++ 云网络验证系统 软件验证 脚本验证">
+    <meta name="description" content="免费的网络验证系统 提卡免费 可以管理多个软件 功能丰富">
+    <link rel="stylesheet" href="/Public/css/a100e2e6.app.css">
+    <link rel="stylesheet" href="/Public/css/common.css">
+    <script src="/Public/js/jquery-1.9.1.min.js"></script>
+    <script src="/Public/js/bootstrap.min.js"></script>
+    <script src="/Public/js/common.js"></script>
+</head>
+<style>
+div.form-group{
+    margin-bottom: 8px;
+}
+</style>
+<body>
+
+<include file="Application/Home/View/Common/Navigation.html"/>
+<include file="Application/Home/View/Common/Sidebar.html"/>
+
+<div class="right-container">
+    <form method="get">
+        <input type="text" hidden="hidden" name="sid" value="{$sid}">
+        <label>软件名称</label>
+        <div class="form-group input-group-half">
+            <input type="text" class="form-control" name="software" value="{$software}" placeholder="请输入软件名">
+        </div>
+        <label>试用分钟</label>
+        <div class="form-group input-group-half">
+            <input type="text" class="form-control" name="try_minutes" value="{$try_minutes}" placeholder="填0代表不可试用">
+        </div>
+        <label>试用次数</label>
+        <div class="form-group input-group-half">
+            <input type="text" class="form-control" name="try_count" value="{$try_count}" placeholder="填0代表不可试用">
+        </div>
+        <div class="form-group">
+            <label class="control-label ng-scope">绑机多开模式</label>
+            <div class="custom-form-inline custom-form-horizontal-form">
+                <div class="radio custom-control">
+                    <label>
+                        <input type="radio" value="0" class="ng-pristine ng-valid" name="bindmode" {$bindmode0}>
+                        <span class="control-indicator"></span>
+                        绑机单开
+                    </label>
+                </div>
+                <div class="radio custom-control">
+                    <label>
+                        <input type="radio" value="1" class="ng-pristine ng-valid" name="bindmode" {$bindmode1}>
+                        <span class="control-indicator"></span>
+                        绑机多开
+                    </label>
+                </div>
+
+                <div class="radio custom-control">
+                    <label>
+                        <input type="radio" value="2" class="ng-pristine ng-valid" name="bindmode" {$bindmode2}>
+                        <span class="control-indicator"></span>
+                        不绑机多开
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label ng-scope">用户解绑模式</label>
+            <div class="custom-form-inline custom-form-horizontal-form">
+                <div class="radio custom-control">
+                    <label>
+                        <input type="radio" value="0" class="ng-pristine ng-valid" name="unbindmode" {$unbindmode0}>
+                        <span class="control-indicator"></span>
+                        允许解绑
+                    </label>
+                </div>
+                <div class="radio custom-control">
+                    <label>
+                        <input type="radio" value="1" class="ng-pristine ng-valid" name="unbindmode" {$unbindmode1}>
+                        <span class="control-indicator"></span>
+                        不允许解绑
+                    </label>
+                </div>
+            </div>
+        </div>
+        <label>软件版本</label>
+        <div class="form-group input-group-half">
+            <input type="text" class="form-control" name="version" value="{$version}" placeholder="请输入非负整数">
+        </div>
+        <label>更新地址</label>
+        <div class="form-group input-group-half">
+            <input type="text" class="form-control" name="update_url" value="{$update_url}" placeholder="请输入url地址">
+        </div>
+        <div class="form-group">
+            <label class="control-label ng-scope">更新模式</label>
+            <div class="custom-form-inline custom-form-horizontal-form">
+                <div class="radio custom-control">
+                    <label>
+                        <input type="radio" value="0" class="ng-pristine ng-valid" name="updatemode" {$updatemode0}>
+                        <span class="control-indicator"></span>
+                        不强制更新
+                    </label>
+                </div>
+                <div class="radio custom-control">
+                    <label>
+                        <input type="radio" value="1" class="ng-pristine ng-valid" name="updatemode" {$updatemode1}>
+                        <span class="control-indicator"></span>
+                        强制更新
+                    </label>
+                </div>
+            </div>
+        </div>
+        <label>软件公告</label>
+        <div class="form-group input-group-half ng-scope">
+        <textarea class="form-control ng-pristine ng-valid" rows="4" name="info">{$info}</textarea>
+        </div>
+        <div class="form-group">
+            <label class="control-label ng-scope">软件状态改变</label>
+            <div class="custom-form-inline custom-form-horizontal-form">
+                <div class="radio custom-control">
+                    <label>
+                        <input type="radio" value="0" class="ng-pristine ng-valid" name="frozen" {$frozen0}>
+                        <span class="control-indicator"></span>
+                        正常
+                    </label>
+                </div>
+                <div class="radio custom-control">
+                    <label>
+                        <input type="radio" value="1" class="ng-pristine ng-valid" name="frozen" {$frozen1}>
+                        <span class="control-indicator"></span>
+                        禁用
+                    </label>
+                </div>
+            </div>
+        </div>
+        <button type="submit" name="submit" class="btn btn-primary">{$buttonTitle}</button>
+    </form>
+</div>
+</body>
+</html>

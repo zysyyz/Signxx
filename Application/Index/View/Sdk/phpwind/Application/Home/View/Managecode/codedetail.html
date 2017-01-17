@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>Sign++免费网络验证 后台管理</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="keywords" content="sign++ 云网络验证系统 软件验证 脚本验证">
+    <meta name="description" content="免费的网络验证系统 提卡免费 可以管理多个软件 功能丰富">
+    <link rel="stylesheet" href="/Public/css/a100e2e6.app.css">
+    <link rel="stylesheet" href="/Public/css/common.css">
+    <script src="/Public/js/jquery-1.9.1.min.js"></script>
+    <script src="/Public/js/bootstrap.min.js"></script>
+    <script src="/Public/js/common.js"></script>
+</head>
+<style>
+div.form-group{
+    margin-bottom: 8px;
+}
+    div.input-group{
+        margin-bottom: 8px;
+    }
+</style>
+<body>
+
+<include file="Application/Home/View/Common/Navigation.html"/>
+<include file="Application/Home/View/Common/Sidebar.html"/>
+
+<div class="right-container">
+    <form method="get">
+        <label>注册码</label>
+        <div class="input-group input-group-half">
+            <input type="text" readonly="readonly" class="form-control softname-input" name="code" value="{:I('code')}">
+            <div class="input-group-btn">
+                <button type="submit" name="unbind" class="btn btn-primary dropdown-toggle">解绑电脑</button>
+            </div>
+        </div>
+    </form>
+
+    <form method="get">
+        <input type="text" hidden name="code" value="{:I('code')}">
+        <div class="form-group">
+            <label class="control-label ng-scope">使用状态</label>
+            <div class="custom-form-inline custom-form-horizontal-form">
+                <div class="radio custom-control">
+                    <label>
+                        <input type="radio" value="0" class="ng-pristine ng-valid" name="frozen" {$frozen==0?'checked':''}>
+                        <span class="control-indicator"></span>
+                        正常
+                    </label>
+                </div>
+                <div class="radio custom-control">
+                    <label>
+                        <input type="radio" value="1" class="ng-pristine ng-valid" name="frozen" {$frozen==1?'checked':''}>
+                        <span class="control-indicator"></span>
+                        冻结
+                    </label>
+                </div>
+            </div>
+        </div>
+        <label>备注</label>
+        <div class="form-group input-group-half ng-scope">
+            <textarea class="form-control ng-pristine ng-valid" rows="6" name="mark">{$mark}</textarea>
+        </div>
+        <button type="submit" name="change" class="btn btn-primary">修改</button>
+    </form>
+    <hr>
+
+    <label>所属软件</label>
+    <div class="form-group input-group-half">
+        <input type="text" class="form-control" readonly value="{$software_name}">
+    </div>
+    <label>时长</label>
+    <div class="form-group input-group-half">
+        <input type="text" class="form-control" readonly value="{$time_str}">
+    </div>
+    <label>生成时间</label>
+    <div class="form-group input-group-half">
+        <input type="text" class="form-control" readonly value="{$produce_time}">
+    </div>
+    <label>开始时间</label>
+    <div class="form-group input-group-half">
+        <input type="text" class="form-control" readonly value="{$beginuse_time}">
+    </div>
+    <label>到期时间</label>
+    <div class="form-group input-group-half">
+        <input type="text" class="form-control" readonly value="{$expire_time}">
+    </div>
+    <label>最后登录时间</label>
+    <div class="form-group input-group-half">
+        <input type="text" class="form-control" readonly value="{$last_time}">
+    </div>
+    <label>最后登录IP</label>
+    <div class="form-group input-group-half">
+        <input type="text" class="form-control" readonly value="{$last_ip}">
+    </div>
+    <label>使用次数</label>
+    <div class="form-group input-group-half">
+        <input type="text" class="form-control" readonly value="{$use_count}">
+    </div>
+    <label>在线状态</label>
+    <div class="form-group input-group-half">
+        <input type="text" class="form-control" readonly value="{$online}">
+    </div>
+    <label>绑定状态</label>
+    <div class="form-group input-group-half">
+        <input type="text" class="form-control" readonly value="{$bindtype}">
+    </div>
+</div>
+</body>
+</html>

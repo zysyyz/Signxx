@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>Sign++免费网络验证 后台管理</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="keywords" content="sign++ 云网络验证系统 软件验证 脚本验证">
+    <meta name="description" content="免费的网络验证系统 提卡免费 可以管理多个软件 功能丰富">
+    <link rel="stylesheet" href="/Public/css/a100e2e6.app.css">
+    <link rel="stylesheet" href="/Public/css/common.css">
+    <script src="/Public/js/jquery-1.9.1.min.js"></script>
+    <script src="/Public/js/bootstrap.min.js"></script>
+</head>
+<style>
+    span.time {
+        color: #666;
+    }
+
+    div.input-group-half {
+        margin-bottom: 8px;
+    }
+    div.head {
+        margin-bottom: 5px;
+    }
+    span.button {
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+        color: #333;
+        background-color: #f5f5f5;
+        background-image: linear-gradient(to bottom,#fff 0,#f5f5f5 100%);
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        border-color: #d0d0d0;
+        border-bottom-color: #c3c3c3;
+        touch-action: manipulation;
+        cursor: pointer;
+        box-shadow: 0 1px 2px rgba(0,0,0,.08);
+        margin-left: 10px;
+    }
+    span.button:hover {
+        color: #3090e4;
+        border-color: #3090e4;
+        background-color: #fff;
+    }
+    ul.recommend {
+        padding: 0 0 0 5px;
+        margin-bottom: 3px;
+        background: #f9f9f9;
+    }
+    ul.recommend input {
+        width: 80px;
+        text-align: center;
+        margin: 0 2px 0 2px;
+        height: 26px;
+    }
+    ul.recommend li {
+        padding: 5px;
+    }
+    div.desc {
+        margin-top: 40px;
+    }
+</style>
+<body>
+<include file="Application/Home/View/Common/Navigation.html"/>
+<include file="Application/Home/View/Common/Sidebar.html"/>
+
+<div class="right-container">
+
+    <form method="get" id="form">
+        <div class="head">
+            <label>推荐人赠送规则</label>&emsp;
+            <span class="button" onclick="addRule(1)">新增规则</span>
+        </div>
+        <ul class="recommend" id="recommend1">
+            <volist name="recommenderRules" id="vo">
+                <li>
+                    <span>如果注册码总时长等于</span><input type="text" class="originDay1" value="{$vo.origin_day}" onchange='inputChange()'><span>天，赠送时长</span><input type=text class='giveDay1' value="{$vo.give_day}" onchange='inputChange()'><span>天</span><span class=button onclick='del()'>删除规则</span>
+                </li>
+            </volist>
+        </ul>
+        <hr>
+        <div class="head">
+            <label>被推荐人赠送规则</label>
+            <span class="button" onclick="addRule(2)">新增规则</span>
+        </div>
+        <ul class="recommend" id="recommend2">
+            <volist name="recommendedRules" id="vo">
+                <li>
+                    <span>如果注册码总时长等于</span><input type="text" class="originDay2" value="{$vo.origin_day}" onchange='inputChange()'><span>天，赠送时长</span><input type=text class='giveDay2' value="{$vo.give_day}" onchange='inputChange()'><span>天</span><span class=button onclick='del()'>删除规则</span>
+                </li>
+            </volist>
+        </ul>
+        <input id="op" type="text" name="op" hidden="hidden">
+    </form>
+
+    <hr>
+    <button onclick="confirm()" class="btn btn-primary">保存</button>
+    <div class="desc">
+        <div class="callout callout-info ng-scope">
+            <span>建议注册码时长7天赠送1天，注册码时长30天赠送4天。</span><br>
+            <span><strong>推荐人</strong>指提供推荐码的用户</span><br>
+            <sapn><strong>被推荐人</strong>指使用推荐码的用户</sapn>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    // 增加规则
+    function addRule(index) {
+        if (index == 1) {
+            var ul = document.querySelector('#recommend1');
+            ul.innerHTML = ul.innerHTML + "<li><span>如果注册码总时长等于</span><input type=text class='originDay1' onchange='inputChange()'><span>天，赠送时长</span><input type=text class='giveDay1' onchange='inputChange()'><span>天</span><span class=button onclick='del()'>删除规则</span></li>";
+        } else {
+            var ul = document.querySelector('#recommend2');
+            ul.innerHTML = ul.innerHTML + "<li><span>如果注册码总时长等于</span><input type=text class='originDay2' onchange='inputChange()'><span>天，赠送时长</span><input type=text class='giveDay2' onchange='inputChange()'><span>天</span><span class=button onclick='del()'>删除规则</span></li>";
+        }
+    }
+
+    // 删除规则
+    function del() {
+        var ul = window.event.target.parentNode.parentNode;
+        var li = window.event.target.parentNode;
+        ul.removeChild(li);
+    }
+
+    // 保存input的值
+    function inputChange() {
+        var input = window.event.target;
+        input.setAttribute('value', input.value);
+    }
+
+    // 确定
+    function confirm() {
+        setRecommenderName();
+        setRecommendedName();
+
+        document.getElementById('op').value = 'save';
+        document.getElementById('form').submit();
+    }
+
+    // 给推荐人规则设置name数组
+    function setRecommenderName() {
+        var originDays = document.getElementsByClassName('originDay1')
+        var giveDays = document.getElementsByClassName('giveDay1')
+        for (var i=0; i<originDays.length; i++) {
+            originDays[i].setAttribute('name', 'recommenderRule[' + i + '][originDay]');
+            giveDays[i].setAttribute('name', 'recommenderRule[' + i + '][giveDay]');
+        }
+    }
+
+    // 给被推荐人规则设置name数组
+    function setRecommendedName() {
+        var originDays = document.getElementsByClassName('originDay2')
+        var giveDays = document.getElementsByClassName('giveDay2')
+        for (var i=0; i<originDays.length; i++) {
+            originDays[i].setAttribute('name', 'recommendedRule[' + i + '][originDay]');
+            giveDays[i].setAttribute('name', 'recommendedRule[' + i + '][giveDay]');
+        }
+    }
+
+</script>
+</html>

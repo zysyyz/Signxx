@@ -1,0 +1,36 @@
+[ 2016-10-18T22:30:41+08:00 ] 122.246.54.85 /Home/changesoft?sid=155&software=%E9%80%86%E6%88%98%E6%8C%82%E6%9C%BA%E8%84%9A%E6%9C%AC&try_minutes=10&try_count=1&bindmode=0&unbindmode=1&version=1&update_url=&updatemode=0&info=%E9%80%89%E6%8B%A9%E5%A4%A7%E5%8C%BA%7C%E5%9C%B0%E5%9B%BE%7C%E6%A8%A1%E5%BC%8F%7C%E5%8D%B3%E5%8F%AF%E5%BC%80%E5%A7%8B%E8%84%9A%E6%9C%AC%0D%0A0%E7%82%B9%E8%87%AA%E5%8A%A8%E6%89%BE%E6%88%BF%E7%94%A8%E4%BA%8E%E5%85%A8%E5%8C%BA%E8%87%AA%E5%8A%A8%E5%8C%B9%E9%85%8D%E9%A1%B9%0D%0A%E6%89%BE%E6%88%BF%E7%A9%BA%E4%BD%8D2%E4%BD%8D%E7%94%A8%E4%BA%8E%E8%87%AA%E5%8A%A8%E6%89%BE%E6%88%BF%E5%8F%8A%E5%A1%94%E9%98%B2%0D%0A%E5%A1%94%E9%98%B2-%E7%8B%82%E6%B2%99%E5%9C%A3%E6%AE%BF%E6%A8%A1%E5%BC%8F%E5%AF%B9%E5%BA%94%E6%A8%A1%E5%BC%8F%E9%80%89%E9%A1%B9&frozen=0&submit=
+ERR: 1406:Data too long for column 'info' at row 1
+ [ SQL语句 ] : UPDATE cloud_software SET user_id = '79', name = '逆战挂机脚本', try_minutes = '10', try_count = '1', bindmode = '0',unbindmode = '1',version = '1', update_url = '',updatemode = '0',info = '选择大区|地图|模式|即可开始脚本0点自动找房用于全区自动匹配项找房空位2位用于自动找房及塔防塔防-狂沙圣殿模式对应模式选项',frozen ='0' WHERE id = '155'
+ERR: 1406:Data too long for column 'info' at row 1
+ [ SQL语句 ] : UPDATE cloud_software SET user_id = '79', name = '逆战挂机脚本', try_minutes = '10', try_count = '1', bindmode = '0',unbindmode = '1',version = '1', update_url = '',updatemode = '0',info = '选择大区|地图|模式|即可开始脚本0点自动找房用于全区自动匹配项找房空位2位用于自动找房及塔防塔防-狂沙圣殿模式对应模式选项',frozen ='0' WHERE id = '155'
+
+[ 2016-10-18T22:30:47+08:00 ] 122.246.54.85 /Home/changesoft?sid=155&software=%E9%80%86%E6%88%98%E6%8C%82%E6%9C%BA%E8%84%9A%E6%9C%AC&try_minutes=10&try_count=1&bindmode=0&unbindmode=1&version=1&update_url=&updatemode=0&info=%E9%80%89%E6%8B%A9%E5%A4%A7%E5%8C%BA%7C%E5%9C%B0%E5%9B%BE%7C%E6%A8%A1%E5%BC%8F%7C%E5%8D%B3%E5%8F%AF%E5%BC%80%E5%A7%8B%E8%84%9A%E6%9C%AC%0D%0A0%E7%82%B9%E8%87%AA%E5%8A%A8%E6%89%BE%E6%88%BF%E7%94%A8%E4%BA%8E%E5%85%A8%E5%8C%BA%E8%87%AA%E5%8A%A8%E5%8C%B9%E9%85%8D%E9%A1%B9%0D%0A%E6%89%BE%E6%88%BF%E7%A9%BA%E4%BD%8D2%E4%BD%8D%E7%94%A8%E4%BA%8E%E8%87%AA%E5%8A%A8%E6%89%BE%E6%88%BF%E5%8F%8A%E5%A1%94%E9%98%B2%0D%0A%E5%A1%94%E9%98%B2-%E7%8B%82%E6%B2%99%E5%9C%A3%E6%AE%BF%E6%A8%A1%E5%BC%8F%E5%AF%B9%E5%BA%94%E6%A8%A1%E5%BC%8F%E9%80%89%E9%A1%B9&frozen=0&submit=
+ERR: 1406:Data too long for column 'info' at row 1
+ [ SQL语句 ] : UPDATE cloud_software SET user_id = '79', name = '逆战挂机脚本', try_minutes = '10', try_count = '1', bindmode = '0',unbindmode = '1',version = '1', update_url = '',updatemode = '0',info = '选择大区|地图|模式|即可开始脚本0点自动找房用于全区自动匹配项找房空位2位用于自动找房及塔防塔防-狂沙圣殿模式对应模式选项',frozen ='0' WHERE id = '155'
+ERR: 1406:Data too long for column 'info' at row 1
+ [ SQL语句 ] : UPDATE cloud_software SET user_id = '79', name = '逆战挂机脚本', try_minutes = '10', try_count = '1', bindmode = '0',unbindmode = '1',version = '1', update_url = '',updatemode = '0',info = '选择大区|地图|模式|即可开始脚本0点自动找房用于全区自动匹配项找房空位2位用于自动找房及塔防塔防-狂沙圣殿模式对应模式选项',frozen ='0' WHERE id = '155'
+
+[ 2016-10-18T22:31:14+08:00 ] 122.246.54.85 /Home/changesoft?sid=155&software=%E9%80%86%E6%88%98%E6%8C%82%E6%9C%BA%E8%84%9A%E6%9C%AC&try_minutes=10&try_count=1&bindmode=0&unbindmode=1&version=1&update_url=&updatemode=0&info=%E9%80%89%E6%8B%A9%E5%A4%A7%E5%8C%BA%7C%E5%9C%B0%E5%9B%BE%7C%E6%A8%A1%E5%BC%8F%7C%E5%8D%B3%E5%8F%AF%E5%BC%80%E5%A7%8B%E8%84%9A%E6%9C%AC%0D%0A0%E7%82%B9%E8%87%AA%E5%8A%A8%E6%89%BE%E6%88%BF%E7%94%A8%E4%BA%8E%E5%85%A8%E5%8C%BA%E8%87%AA%E5%8A%A8%E5%8C%B9%E9%85%8D%E9%A1%B9%0D%0A%E6%89%BE%E6%88%BF%E7%A9%BA%E4%BD%8D2%E4%BD%8D%E7%94%A8%E4%BA%8E%E8%87%AA%E5%8A%A8%E6%89%BE%E6%88%BF%E5%8F%8A%E5%A1%94%E9%98%B2%0D%0A%E5%A1%94%E9%98%B2-%E7%8B%82%E6%B2%99%E5%9C%A3%E6%AE%BF%E6%A8%A1%E5%BC%8F%E5%AF%B9%E5%BA%94%E6%A8%A1%E5%BC%8F%E9%80%89%E9%A1%B9&frozen=0&submit=
+ERR: 1406:Data too long for column 'info' at row 1
+ [ SQL语句 ] : UPDATE cloud_software SET user_id = '79', name = '逆战挂机脚本', try_minutes = '10', try_count = '1', bindmode = '0',unbindmode = '1',version = '1', update_url = '',updatemode = '0',info = '选择大区|地图|模式|即可开始脚本0点自动找房用于全区自动匹配项找房空位2位用于自动找房及塔防塔防-狂沙圣殿模式对应模式选项',frozen ='0' WHERE id = '155'
+ERR: 1406:Data too long for column 'info' at row 1
+ [ SQL语句 ] : UPDATE cloud_software SET user_id = '79', name = '逆战挂机脚本', try_minutes = '10', try_count = '1', bindmode = '0',unbindmode = '1',version = '1', update_url = '',updatemode = '0',info = '选择大区|地图|模式|即可开始脚本0点自动找房用于全区自动匹配项找房空位2位用于自动找房及塔防塔防-狂沙圣殿模式对应模式选项',frozen ='0' WHERE id = '155'
+
+[ 2016-10-18T22:31:32+08:00 ] 122.246.54.85 /Home/changesoft?sid=155&software=%E9%80%86%E6%88%98%E6%8C%82%E6%9C%BA%E8%84%9A%E6%9C%AC&try_minutes=10&try_count=1&bindmode=0&unbindmode=1&version=1&update_url=&updatemode=0&info=%E9%80%89%E6%8B%A9%E5%A4%A7%E5%8C%BA%7C%E5%9C%B0%E5%9B%BE%7C%E6%A8%A1%E5%BC%8F%7C%E5%8D%B3%E5%8F%AF%E5%BC%80%E5%A7%8B%E8%84%9A%E6%9C%AC%7C0%E7%82%B9%E8%87%AA%E5%8A%A8%E6%89%BE%E6%88%BF%E7%94%A8%E4%BA%8E%E5%85%A8%E5%8C%BA%E8%87%AA%E5%8A%A8%E5%8C%B9%E9%85%8D%E9%A1%B9%7C%E6%89%BE%E6%88%BF%E7%A9%BA%E4%BD%8D2%E4%BD%8D%E7%94%A8%E4%BA%8E%E8%87%AA%E5%8A%A8%E6%89%BE%E6%88%BF%E5%8F%8A%E5%A1%94%E9%98%B2%7C%E5%A1%94%E9%98%B2-%E7%8B%82%E6%B2%99%E5%9C%A3%E6%AE%BF%E6%A8%A1%E5%BC%8F%E5%AF%B9%E5%BA%94%E6%A8%A1%E5%BC%8F%E9%80%89%E9%A1%B9&frozen=0&submit=
+ERR: 1406:Data too long for column 'info' at row 1
+ [ SQL语句 ] : UPDATE cloud_software SET user_id = '79', name = '逆战挂机脚本', try_minutes = '10', try_count = '1', bindmode = '0',unbindmode = '1',version = '1', update_url = '',updatemode = '0',info = '选择大区|地图|模式|即可开始脚本|0点自动找房用于全区自动匹配项|找房空位2位用于自动找房及塔防|塔防-狂沙圣殿模式对应模式选项',frozen ='0' WHERE id = '155'
+ERR: 1406:Data too long for column 'info' at row 1
+ [ SQL语句 ] : UPDATE cloud_software SET user_id = '79', name = '逆战挂机脚本', try_minutes = '10', try_count = '1', bindmode = '0',unbindmode = '1',version = '1', update_url = '',updatemode = '0',info = '选择大区|地图|模式|即可开始脚本|0点自动找房用于全区自动匹配项|找房空位2位用于自动找房及塔防|塔防-狂沙圣殿模式对应模式选项',frozen ='0' WHERE id = '155'
+
+[ 2016-10-18T23:09:33+08:00 ] 122.246.54.85 /Home/managecode/codedetail?code=FE34391831D8DDFFCBED4ECA8058FAF2&frozen=0&mark=guansheng123%5B%5B%5B%5B%5B%5B%E5%AE%89%E5%BE%BD%E7%9C%81+-+%E7%94%B5%E4%BF%A1%5D%5D%5D%5D%5D%5D&change=
+ERR: 1406:Data too long for column 'mark' at row 273
+ [ SQL语句 ] : UPDATE cloud_regcode SET frozen = '0', mark = 'guansheng123[[[[[[安徽省 - 电信]]]]]]' WHERE code = 'FE34391831D8DDFFCBED4ECA8058FAF2'
+ERR: 1406:Data too long for column 'mark' at row 273
+ [ SQL语句 ] : UPDATE cloud_regcode SET frozen = '0', mark = 'guansheng123[[[[[[安徽省 - 电信]]]]]]' WHERE code = 'FE34391831D8DDFFCBED4ECA8058FAF2'
+
+[ 2016-10-18T23:09:46+08:00 ] 122.246.54.85 /Home/managecode/codedetail?code=FE34391831D8DDFFCBED4ECA8058FAF2&frozen=0&mark=guansheng123+%5B%5B%5B%5B%5B%5B%5B%5B%E5%AE%89%E5%BE%BD%E7%9C%81+-+%E7%94%B5%E4%BF%A1%5D%5D%5D%5D%5D%5D%5D%5D%5D&change=
+ERR: 1406:Data too long for column 'mark' at row 273
+ [ SQL语句 ] : UPDATE cloud_regcode SET frozen = '0', mark = 'guansheng123 [[[[[[[[安徽省 - 电信]]]]]]]]]' WHERE code = 'FE34391831D8DDFFCBED4ECA8058FAF2'
+ERR: 1406:Data too long for column 'mark' at row 273
+ [ SQL语句 ] : UPDATE cloud_regcode SET frozen = '0', mark = 'guansheng123 [[[[[[[[安徽省 - 电信]]]]]]]]]' WHERE code = 'FE34391831D8DDFFCBED4ECA8058FAF2'
+

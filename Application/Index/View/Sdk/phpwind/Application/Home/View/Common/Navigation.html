@@ -1,0 +1,30 @@
+<nav class="lc-bd ng-scope">
+    <nav class="dashboard-subnav navbar  navbar-static-top" role="navigation">
+        <div class="container-fluid">
+            <ul>
+                <li class="logo"><a href="/"  target="_blank"><img src="/Public/image/logo.png" alt="进入官网"></a></li>
+                <li class="dropdown" {$username==''?'hidden':''}>
+                    <a role="button" class="dropdown-toggle user-name" data-toggle="dropdown">
+                        <span class="user-name-text">
+                            {$username}
+                            <span class="caret"></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li>
+                            <a href="/Home/modifypassword">修改密码</a>
+                        </li>
+                        <li>
+                            <a href="/Home/?a=logout">退出登录</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="browser_tip">（如页面显示有问题请使用谷歌或火狐浏览器）</li>
+            </ul>
+        </div>
+    </nav>
+</nav>
+
+<div style="display: none">
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260520261'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260520261' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>

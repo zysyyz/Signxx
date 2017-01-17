@@ -1,0 +1,45 @@
+[ 2016-12-18T00:03:32+08:00 ] 123.125.71.34 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2016-12-18T03:55:11+08:00 ] 23.251.63.45 http://www.luisaranguren.com/azenv.php
+ERR: 无法加载控制器:Azenv.php
+
+[ 2016-12-18T03:58:10+08:00 ] 185.93.1.58 /recordings/LICENSE.txt
+ERR: 无法加载控制器:Recordings
+
+[ 2016-12-18T05:31:42+08:00 ] 23.251.63.45 http://www.sbjudge2.com/azenv.php
+ERR: 无法加载控制器:Azenv.php
+
+[ 2016-12-18T06:33:19+08:00 ] 5.178.86.78 http://check.best-proxies.ru/azenv.php?auth=148201399937&a=PSCN&i=2344920104&p=80
+ERR: 无法加载控制器:Azenv.php
+
+[ 2016-12-18T06:46:35+08:00 ] 23.251.63.45 http://www.sbjudge1.com/azenv.php
+ERR: 无法加载控制器:Azenv.php
+
+[ 2016-12-18T08:24:51+08:00 ] 207.46.13.161 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2016-12-18T08:25:35+08:00 ] 207.46.13.161 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
+[ 2016-12-18T10:57:11+08:00 ] 95.213.187.190 http://check.best-proxies.ru/azenv.php?auth=148202983125&a=PSCN&i=2344920104&p=80
+ERR: 无法加载控制器:Azenv.php
+
+[ 2016-12-18T15:20:16+08:00 ] 123.57.81.70 http://www.izhongsai.com/show.html?t=1482045616180
+ERR: 无法加载控制器:Show
+
+[ 2016-12-18T17:04:23+08:00 ] 120.25.103.140 /admin
+ERR: 无法加载控制器:Admin
+
+[ 2016-12-18T17:37:35+08:00 ] 42.91.122.200 /Public/fonts/nootype_-_radikal_bold-webfont.woff2
+ERR: 无法加载控制器:Public
+
+[ 2016-12-18T17:37:35+08:00 ] 42.91.122.200 /Public/fonts/nootype_-_radikal_bold-webfont.woff
+ERR: 无法加载控制器:Public
+
+[ 2016-12-18T17:37:35+08:00 ] 42.91.122.200 /Public/fonts/nootype_-_radikal_bold-webfont.ttf
+ERR: 无法加载控制器:Public
+
+[ 2016-12-18T19:43:16+08:00 ] 220.181.125.163 /robots.txt
+ERR: 无法加载控制器:Robots.txt
+
